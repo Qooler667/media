@@ -1,0 +1,125 @@
+.prim {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border: 1px solid black;
+}
+
+.tooltip {
+    font-size: 48px;
+    position: relative;
+    border-bottom: 2px dotted red;
+}
+
+.tooltip::after {
+    content: attr(span-tooltip);
+    position: absolute;
+    top: -75px;
+    right: 275px;
+    opacity: 10;
+    transition: all .5s;
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 75px;
+
+
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 920px) {
+    .tooltip {
+        font-size: 2.5rem;
+    }
+
+    .tooltip::after {
+        content: attr(span-tooltip);
+        position: absolute;
+        top: -65px;
+        right: 225px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .tooltip {
+        font-size: 2rem;
+    }
+
+    .tooltip::after {
+        content: attr(span-tooltip);
+        position: absolute;
+        top: -50px;
+        right: 220px;
+        width: 150px;
+        height: 50px;
+        padding-top: 5px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .tooltip {
+        font-size: 1.5rem;
+    }
+
+    .tooltip::after {
+        content: attr(span-tooltip);
+        top: -40px;
+        right: 155px;
+        width: 125px;
+        height: 35px;
+
+    }
+}
+
+@media screen and (max-width:500px) {
+    .tooltip::after {
+
+        left: 154px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .tooltip::after {
+        left: 154px;
+        margin: 0 auto;
+    }
+
+    .tooltip {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:457px) {
+    .tooltip::after {
+        left: 140px;
+    }
+}
+
+@media screen and (max-width:427px) {
+    .tooltip::after {
+        top: -35px;
+        left: 123px;
+        font-size: 1.5rem;
+        width: 100px;
+        height: 30px;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width:370px) {
+    .tooltip::after {
+        left: 92px;
+        font-size: 1.3rem;
+
+
+    }
+
+}
