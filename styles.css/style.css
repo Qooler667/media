@@ -1,4 +1,4 @@
-.prim {
+/* .prim {
     position: relative;
     padding: 10px;
     text-align: center;
@@ -122,4 +122,120 @@
 
     }
 
+} */
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 20px;
+
+}
+
+.tooltip {
+    position: relative;
+    display: block;
+    margin: auto;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    border-radius: 8px;
+    background-color: rgb(65, 85, 156);
+    color: white;
+    text-align: center;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    box-shadow: 3px 3px 3px rgb(159, 158, 158);
+}
+
+.tooltip::before {
+    content: "Tooltip Top";
+    font-size: 1.2rem;
+    font-style: inherit;
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    width: 10rem;
+    padding: 5px 15px;
+    box-shadow: 3px 3px 5px rgb(165, 165, 244);
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    transform: translate(-50%);
+    left: 50%;
+    display: none;
+}
+
+.tooltip-top::before {
+    top: -42px;
+    border-radius: 0 0 10px 10px;
+
+}
+
+
+
+.tooltip-top::after {
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    top: -13px;
+}
+
+
+
+.tooltip-left::before {
+    content: "Tooltip Left";
+    top: 1px;
+    left: -110px;
+    border-radius: 0 10px 10px 0;
+}
+
+.tooltip-left::after {
+    border-left: 8px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -12px;
+    top: 7px;
+}
+
+.tooltip-right::before {
+    content: "Tooltip Right";
+    top: 1px;
+    left: 210px;
+    border-radius: 10px 0 0 10px;
+}
+
+.tooltip-right::after {
+    border-right: 8px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 7px;
+    right: -85px;
+}
+
+.tooltip-bottom::before {
+    content: "Tooltip Bottom";
+    white-space: nowrap;
+    bottom: -42px;
+    border-radius: 10px 10px 0 0;
+}
+
+.tooltip-bottom::after {
+    border-bottom: 10px solid rgb(0, 0, 0);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -13px;
+}
+
+.tooltip:hover::before,
+.tooltip:hover:after {
+    display: block;
 }
